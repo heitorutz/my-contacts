@@ -3,11 +3,11 @@ import { StyledButton } from './styles';
 import Spinner from '../Spinner';
 
 export default function Button({
-  type,
-  disabled,
-  isLoading,
-  children,
-  danger,
+  type = 'button',
+  disabled = false,
+  isLoading = false,
+  children = false,
+  danger = false,
   onClick,
 }) {
   return (
@@ -25,12 +25,4 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   danger: PropTypes.bool,
   onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  type: 'button',
-  disabled: false,
-  isLoading: false,
-  danger: false,
-  onClick: undefined,
 };
